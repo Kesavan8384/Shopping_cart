@@ -21,7 +21,7 @@ export class SigninComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this.router.navigate(['/app']);
+    this.router.navigate(['/app/products']);
   }
 
 
@@ -44,7 +44,7 @@ export class SigninComponent implements OnInit {
         if(this.signInForm.value.useremail ==Getlocaldata.useremail &&this.signInForm.value.password == Getlocaldata.password ){
           this.toastr.success("Sign in Successfully");
           localStorage.setItem('isLoggedIn', 'true');
-          this.router.navigate(['/app']);
+          this.router.navigate(['/app/products']);
        }else {
          this.toastr.error("Username/Password incorrectly")
        }

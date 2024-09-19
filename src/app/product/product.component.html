@@ -1,0 +1,29 @@
+<div >
+    <h3 (click)="info(product.id)">{{ product.name }}</h3>
+    <p (click)="info(product.id)">{{ product.description }}</p>
+    <img (click)="info(product.id)" [src]="product.image" alt="{{ product.name }}">
+    <p>{{ product.price | currency }}</p>
+    
+    <div class="add-rem">
+      <div class="add-rem">
+        <button mat-icon-button (click)="decrease()">
+          <mat-icon>remove</mat-icon>
+        </button>
+        <span>{{ product.quantity }}</span>
+        <button mat-icon-button (click)="increase()">
+          <mat-icon>add</mat-icon>
+        </button>
+        
+        
+   
+      </div>
+     
+      <div>
+        <button mat-raised-button   (click)="addcart()" *ngIf="!product.cart">Add to Cart</button>
+        <button mat-raised-button color="warn"  (click)="removecart()" *ngIf="product.cart">Remove to Cart</button>
+      </div>
+    </div>
+  
+   
+
+  </div>

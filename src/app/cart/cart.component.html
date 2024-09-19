@@ -1,0 +1,9 @@
+<div *ngFor="let product of cartItems">
+    <h4>{{ product.name }}</h4>
+    <p>{{ product.quantity }} x {{ product.price | currency }}</p>
+    <button mat-raised-button color="warn"  (click)="remove(product.id)">Remove</button>
+  </div>
+  <br>
+  <button mat-raised-button color="primary"   (click)="back()">Back</button>
+
+  <p>Total: {{ gettotal() | currency }}</p>

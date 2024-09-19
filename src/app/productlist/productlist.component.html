@@ -1,0 +1,7 @@
+<div class="main">
+    <div *ngFor="let product of products">
+        <app-product [product]="product" (update)="update($event)"></app-product>
+      </div>
+</div>
+
+  

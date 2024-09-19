@@ -1,12 +1,28 @@
 <mat-toolbar color="primary">
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
-      <mat-icon>menu</mat-icon>
-    </button>
-    <span>Shop</span>
+   
+    <span>My Shop</span>
+
     <span class="example-spacer"></span>
-     
-    <button (click)="logout()" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-        <mat-icon>exit_to_app</mat-icon>
-    </button>
+     <div>
+      <button (click)="gotocart()" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+        <mat-icon matBadge="{{this.cartitemscount}}">shopping_cart</mat-icon>
+      </button>
+      <button (click)="logout()" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+          <mat-icon>exit_to_app</mat-icon>
+      </button>
+     </div>
+
 
   </mat-toolbar>
+
+  <router-outlet></router-outlet>
+
+
+
+
+
+
+
+
+
+

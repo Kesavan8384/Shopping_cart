@@ -14,12 +14,21 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ToastrModule } from 'ngx-toastr';
 import { HomeComponent } from './home/home.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
+import { ProductComponent } from './product/product.component';
+import { ProductlistComponent } from './productlist/productlist.component';
+import {MatBadgeModule} from '@angular/material/badge';
+import { ProductinfoComponent } from './productinfo/productinfo.component';
+import { CartComponent } from './cart/cart.component';
 @NgModule({
   declarations: [
     AppComponent,
     SigninComponent,
     SignupComponent,
-    HomeComponent
+    HomeComponent,
+    ProductComponent,
+    ProductlistComponent,
+    ProductinfoComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +44,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
       progressBar: true,
       preventDuplicates: true
     }),
-    MatToolbarModule
+    MatToolbarModule,
+    MatBadgeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
